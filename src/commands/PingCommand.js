@@ -1,6 +1,5 @@
 const PixelCommand = require('../structures/PixelCommand');
 const { EmbedBuilder, version } = require('discord.js');
-const { version: gamever } = require('../../package.json');
 
 class PingCommand extends PixelCommand {
     constructor() {
@@ -22,8 +21,7 @@ class PingCommand extends PixelCommand {
                 .setDescription(
                     `> Пинг подключения к WebSocket: \`${message.client.ws.ping}ms\`\n` +
                     `> Пинг отправки сообщения: \`${after - msg.createdTimestamp}ms\`\n` +
-                    `> Версия Discord.JS: \`${version}\`\n` +
-                    `> Версия игры: \`${gamever}\``
+                    `> Версия Discord.JS: \`${version}\`\n`
                 )
                 .setFooter({ text: `https://${message.client.config.main_domain}/`, iconURL: 'https://i.imgur.com/dgxDCnZ.png' })
                 .setTimestamp()
