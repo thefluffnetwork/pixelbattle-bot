@@ -1,0 +1,7 @@
+services:
+  pixelbattle-bot:
+    build:
+      context: ./
+      tags:
+        - ghcr.io/thefluffnetwork/pixelbattle-bot:${GIT_COMMIT_HASH}
+        - ghcr.io/thefluffnetwork/pixelbattle-bot:latest
